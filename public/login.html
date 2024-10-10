@@ -9,19 +9,20 @@
 </head>
 <body>
 
-<div class="login-container">
-    <h2>ลงทะเบียน</h2>
-        <label for="email">@DOME Email</label>
-        <input type="text" id="email" name="email" placeholder="Enter your @dome email" required>
-        
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        
-        <input type="submit" value="Login">
-    </form>
-</div>
+    <div class="login-container">
+        <h2>ลงทะเบียน</h2>
+        <form id="loginForm" onsubmit="TU_REST_API(); return false;">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <input type="submit" value="Login">
+        </form>
+        <p id="display-rp"></p>
+    </div>
 
 </body>
-<script src="main.js"></script>
 <script src="index.js"></script>
 </html>
