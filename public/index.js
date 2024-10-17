@@ -27,7 +27,14 @@ function TU_REST_API(){
         
             if (response.ok) {
                 console.log('Login successful:', result);
-                document.getElementById("display-rp").innerText = `User Name: ${result.displayname_th}`
+                document.getElementById("display-rp").innerHTML = `
+        ชื่อ : <span class="c1">${result.displayname_th}  </span><br>
+        Email : <span class="c1">${result.email}</span> <br>
+        คณะ : <span class="c1">${result.faculty} </span><br>
+        สาขา : <span class="c1">${result.department} </span><br>
+        สถานะ : <span class="c1">${result.tu_status} </span><br>
+        รหัส : <span class="c1">${result.username}</span></p>`
+                document.getElementById("pop-up").style = "display:block";
                 alert('Login successful');
             } else {
                 console.log('Error:', result);
@@ -37,5 +44,8 @@ function TU_REST_API(){
             console.error('Error:', error);
         }
     });
+}
+function closepop(){
+   document.getElementById('pop-up').style = "display:none"
 }
 

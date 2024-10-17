@@ -1,28 +1,56 @@
-<!Doctype html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="login-container">
-        <h2>ลงทะเบียน</h2>
+        <div class="container-background">
+        <h2>ลงชื่อเข้าใช้</h2>
+        <img src="pic\logo.png" class="tulogo"></img>
+        <br>
+        <br>
         <form id="loginForm" onsubmit="TU_REST_API(); return false;">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            
+           
+            <label for="username">ชื่อผู้ใช้</label>
+            <div class="f1">
+                <div class="circle1">
+            <i class="fa-solid fa-user"></i>
+                </div>
+            <input type="text" id="username" name="username" placeholder="โปรดใส่ชื่อผู้ใช้" required>
+        </div>
+            <label for="password">รหัสผ่าน</label>
+            <div class="f1">
+            <div class="circle1">
+                <i class="fa-solid fa-lock"></i>
+                    </div>
+            <input type="password" id="password" name="password" placeholder="โปรดกรอกรหัสผ่าน" required>
+        </div>
+        <h6><a href="https://page.line.me/pib5088f?openQrModal=true">ลืมรหัสผ่าน</a></h6>
             <input type="submit" value="Login">
         </form>
-        <p id="display-rp"></p>
+      
     </div>
+ 
+</div>
+<br>
+<br>
+<div id="pop-up">
+    <div class="dp-div">
+    <h2>ข้อมูลนักศึกษา</h2>
+    <p id="display-rp"></p>    
+    <button class="fdp" onclick="closepop()"> X </button>
+    </div>
+</div>
+
 
 </body>
 <script src="index.js"></script>
+<script src="https://kit.fontawesome.com/b02d353d44.js" crossorigin="anonymous"></script>
 </html>
